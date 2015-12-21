@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>WChao</title>
   <meta name="author" content="wchao">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:site_name" content="WChao"/>
 
   
     <meta property="og:image" content="undefined"/>
@@ -18,7 +18,7 @@
 
   
   
-    <link href="/favicon.png" rel="icon">
+    <link href="/favicon.ico" rel="icon">
   
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
@@ -47,7 +47,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	  <a class="navbar-brand" href="/">Hexo</a>
+	  <a class="navbar-brand" href="/">WChao</a>
       <div class="collapse navbar-collapse nav-menu">
 		<ul class="nav navbar-nav">
 		  
@@ -84,7 +84,7 @@
   <div class="container">
   	<div class="content">
     	 <div class="page-header">
-  <h1>Hexo</h1>
+  <h1>WChao</h1>
 </div>
 
 <div class="row page">
@@ -95,7 +95,7 @@
 
 		<div class="slogan">
       <i class="fa fa-heart"></i>
-      Yet another bootstrap theme.
+      undefined
 </div>    
 		<div id="top_search"></div>
 		<div class="mypage">
@@ -106,8 +106,64 @@
 	
 	<!-- display as entry -->	
 		<h3 class="title">
-			<div class="date"> 2015-12-11 </div>
-			<div class="article-title"><a href="/2015/12/11/md/" >md</a></div>						
+			<div class="date"> 2015-12-21 </div>
+			<div class="article-title"><a href="/2015/12/21/git/" >git</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="u57FA_u672C_u7528_u6CD5"><a href="#u57FA_u672C_u7528_u6CD5" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4"><a href="#u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4" class="headerlink" title="日常使用的6个命令"></a>日常使用的6个命令</h3><p>记住最常用的6个命令就可以了，其它命令太多，用时再查。</p>
+<p><img src="images/git.png" alt="basic"></p>
+<h2 id="u9AD8_u7EA7_u7528_u6CD5"><a href="#u9AD8_u7EA7_u7528_u6CD5" class="headerlink" title="高级用法"></a>高级用法</h2><h4 id="u672C_u5730_u5FFD_u7565"><a href="#u672C_u5730_u5FFD_u7565" class="headerlink" title="本地忽略"></a>本地忽略</h4><p>文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git update-index --assume-unchanged /path/to/file       <span class="comment">#忽略跟踪</span></span><br><span class="line">$ git update-index --no-assume-unchanged /path/to/file    <span class="comment">#恢复跟踪</span></span><br></pre></td></tr></table></figure>
+<p>之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。</p>
+
+	
+	</div>
+  <a type="button" href="/2015/12/21/git/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2015-12-14 </div>
+			<div class="article-title"><a href="/2015/12/14/hexo/" >Hello World</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+	
+	</div>
+  <a type="button" href="/2015/12/14/hexo/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2015-12-14 </div>
+			<div class="article-title"><a href="/2015/12/14/markdown/" >markdown</a></div>						
 		</h3>
 	
 
@@ -196,7 +252,60 @@
 
 	
 	</div>
-  <a type="button" href="/2015/12/11/md/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2015/12/14/markdown/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2015-12-14 </div>
+			<div class="article-title"><a href="/2015/12/14/DataPoint/" >DataPoint</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>EnumDataPoint:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>EnumTypeName</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>actual_alarm</td>
+<td>ALARM_ID</td>
+<td>NO_ALARM</td>
+</tr>
+</tbody>
+</table>
+<p>在EnumTypes表里先定义Type</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>37</td>
+<td>ALARM_ID</td>
+</tr>
+</tbody>
+</table>
+
+	
+	</div>
+  <a type="button" href="/2015/12/14/DataPoint/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -227,7 +336,7 @@
 <li>item 4</li>
 </ul>
 <h2 id="Head_2-1"><a href="#Head_2-1" class="headerlink" title="Head 2"></a>Head 2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="decorator">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h3 id="Head_3"><a href="#Head_3" class="headerlink" title="Head 3"></a>Head 3</h3><table>
+<h3 id="Head_3"><a href="#Head_3" class="headerlink" title="Head 3"></a>Head 3</h3><h4 id="Head_4"><a href="#Head_4" class="headerlink" title="Head 4"></a>Head 4</h4><h5 id="Head_5"><a href="#Head_5" class="headerlink" title="Head 5"></a>Head 5</h5><h6 id="Head_6"><a href="#Head_6" class="headerlink" title="Head 6"></a>Head 6</h6><table>
 <thead>
 <tr>
 <th>table</th>
@@ -253,36 +362,6 @@
 	
 	</div>
   <a type="button" href="/2015/12/10/dc/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-12-10 </div>
-			<div class="article-title"><a href="/2015/12/10/hello-world/" >Hello World</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-	
-	</div>
-  <a type="button" href="/2015/12/10/hello-world/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
 		
@@ -324,13 +403,33 @@
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/DC/">DC<span>2</span></a></li>
+			<li><a href="/categories/Code/">Code<span>1</span></a></li>
+		
+			<li><a href="/categories/Work/DC/">DC<span>2</span></a></li>
+		
+			<li><a href="/categories/Work/">Work<span>2</span></a></li>
+		
+			<li><a href="/categories/tool/">tool<span>1</span></a></li>
 		
 		</ul>
 	</div>
 
 		
 			
+	<div class="widget">
+		<h4>标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/work/">work<span>2</span></a></li>
+		
+			<li><a href="/tags/dc/">dc<span>2</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
 
 		
 			
@@ -339,15 +438,23 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2015/12/11/md/" ><i class="fa fa-file-o"></i>md...</a>
+        <a href="/2015/12/21/git/" ><i class="fa fa-file-o"></i>git...</a>
+      </li>
+    
+      <li>
+        <a href="/2015/12/14/hexo/" ><i class="fa fa-file-o"></i>Hello World...</a>
+      </li>
+    
+      <li>
+        <a href="/2015/12/14/markdown/" ><i class="fa fa-file-o"></i>markdown...</a>
+      </li>
+    
+      <li>
+        <a href="/2015/12/14/DataPoint/" ><i class="fa fa-file-o"></i>DataPoint...</a>
       </li>
     
       <li>
         <a href="/2015/12/10/dc/" ><i class="fa fa-file-o"></i>dc...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/10/hello-world/" ><i class="fa fa-file-o"></i>Hello World...</a>
       </li>
     
   </ul>
@@ -359,11 +466,7 @@
 	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/wzpan" title="My Github account." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/szwchao" title="My Github account." target="_blank"]);">My Github</a></li>
 	
 	</ul>
 </div>
