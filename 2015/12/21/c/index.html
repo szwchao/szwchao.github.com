@@ -1,40 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>c语言 | wchao</title>
+  <meta name="author" content="wchao">
+  
+  <meta name="description" content="字节对齐1234567891011121314151617// 第一种struct A&amp;#123;    char a;    short b;    int c;&amp;#125;;sizeof(struct A) = 8;// 第二种struct A&amp;#123;    char a;    int c">
   
   
-    
-    <entry>
-      <title><![CDATA[python]]></title>
-      <url>http://szwchao.github.com/2015/12/21/python/</url>
-      <content type="html"><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="u5E38_u7528_u6570_u636E_u7C7B_u578B"><a href="#u5E38_u7528_u6570_u636E_u7C7B_u578B" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
-<p>列表常用方法：</p>
-<ul>
-<li>用len()函数可以获得list元素的个数</li>
-<li>用索引来访问list中每一个位置的元素： 第一个<code>a[0]</code>，倒数第一个<code>a[-1]</code></li>
-<li>追加元素到末尾：<code>a.append(&#39;xxx&#39;)</code></li>
-<li>插入到指定的位置，比如索引号为1的位置：<code>a.insert(1, &#39;yyy&#39;)</code></li>
-<li>删除list末尾的元素：<code>a.pop()</code>，或者删除指定位置的元素：<code>a.pop(1)</code></li>
-</ul>
-<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>元组和列表类似，但是tuple一旦初始化就不能修改。</p>
-<p>但如果像下面的例子：tuple里的list可以改变。原因是第三个其实是指向list的一个元素，而该list指向<code>[&#39;A&#39;, &#39;B&#39;]</code>，指向的list不可以变，但list指向的值可以变</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t = (<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'A'</span>, <span class="string">'B'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t[<span class="number">2</span>][<span class="number">0</span>] = <span class="string">'X'</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t[<span class="number">2</span>][<span class="number">1</span>] = <span class="string">'Y'</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'X'</span>, <span class="string">'Y'</span>])</span><br></pre></td></tr></table></figure>
-<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>字典是key-value哈希的，所以key不能有重复，并且必须是字符串，整数等不可变的可以哈希的类型，list就不能作为key。</p>
-<p>字典常用方法：</p>
-<ul>
-<li>赋值： <code>d[&#39;a&#39;] = 1</code></li>
-<li>取值： <code>d[&#39;a&#39;]</code><ul>
-<li>如果键值不存在，会抛出异常：KeyError。用<code>in</code>判断键值，或者用<code>d.get(&#39;a&#39;, 0)</code>，如果key不存在，返回指定value。</li>
-</ul>
-</li>
-<li>删除一个key： <code>d.pop(&#39;a&#39;)</code></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[c语言]]></title>
-      <url>http://szwchao.github.com/2015/12/21/c/</url>
-      <content type="html"><![CDATA[<h3 id="u5B57_u8282_u5BF9_u9F50"><a href="#u5B57_u8282_u5BF9_u9F50" class="headerlink" title="字节对齐"></a>字节对齐</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="c语言"/>
+  <meta property="og:site_name" content="wchao"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.ico" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">wchao</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> c语言</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h3 id="u5B57_u8282_u5BF9_u9F50"><a href="#u5B57_u8282_u5BF9_u9F50" class="headerlink" title="字节对齐"></a>字节对齐</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
 <p>看图</p>
 <p><img src="/images/c_align.jpg" alt="对齐"></p>
 <h2 id="u6307_u9488"><a href="#u6307_u9488" class="headerlink" title="指针"></a>指针</h2><h3 id="u6307_u9488_u7C7B_u578B"><a href="#u6307_u9488_u7C7B_u578B" class="headerlink" title="指针类型"></a>指针类型</h3><table>
@@ -140,219 +213,140 @@
 <hr>
 <h2 id="u6392_u5E8F"><a href="#u6392_u5E8F" class="headerlink" title="排序"></a>排序</h2><h3 id="u5192_u6CE1_u6392_u5E8F"><a href="#u5192_u6CE1_u6392_u5E8F" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*================================================</span><br><span class="line">  功能：冒泡排序</span><br><span class="line">  输入：数组名称（也就是数组首地址）、数组中元素个数</span><br><span class="line">  ================================================*/</span></span><br><span class="line"><span class="comment">/*====================================================</span><br><span class="line">  算法思想简单描述：</span><br><span class="line"></span><br><span class="line">  在要排序的一组数中，对当前还未排好序的范围内的全部数，自上</span><br><span class="line">  而下对相邻的两个数依次进行比较和调整，让较大的数往下沉，较</span><br><span class="line">  小的往上冒。即：每当两相邻的数比较后发现它们的排序与排序要</span><br><span class="line">  求相反时，就将它们互换。</span><br><span class="line"></span><br><span class="line">  冒泡排序是稳定的。算法时间复杂度O(n2)--[n的平方]</span><br><span class="line">  =====================================================*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">buble_sort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i,j,k;</span><br><span class="line">   <span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;n; j++)   <span class="comment">/* 气泡法要排序n次*/</span></span><br><span class="line">   &#123;</span><br><span class="line">      <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n-j; i++)  <span class="comment">/* 值比较大的元素沉下去后，只把剩下的元素中的最大值再沉下去就可以啦 */</span></span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">if</span>(a[i] &gt; a[i+<span class="number">1</span>])  <span class="comment">/* 把值比较大的元素沉到底 */</span></span><br><span class="line">         &#123;</span><br><span class="line">            k = a[i];</span><br><span class="line">            a[i] = a[i+<span class="number">1</span>];</span><br><span class="line">            a[i+<span class="number">1</span>] = k;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="u5FEB_u6392"><a href="#u5FEB_u6392" class="headerlink" title="快排"></a>快排</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*================================================</span><br><span class="line">  功能：快速排序</span><br><span class="line">  输入：数组名称（也就是数组首地址）、数组中起止元素的下标</span><br><span class="line">  ================================================*/</span></span><br><span class="line"><span class="comment">/*====================================================</span><br><span class="line">  算法思想简单描述：</span><br><span class="line"></span><br><span class="line">  快速排序是对冒泡排序的一种本质改进。它的基本思想是通过一趟</span><br><span class="line">  扫描后，使得排序序列的长度能大幅度地减少。在冒泡排序中，一次</span><br><span class="line">  扫描只能确保最大数值的数移到正确位置，而待排序序列的长度可能只</span><br><span class="line">  减少1。快速排序通过一趟扫描，就能确保某个数（以它为基准点吧）</span><br><span class="line">  的左边各数都比它小，右边各数都比它大。然后又用同样的方法处理</span><br><span class="line">  它左右两边的数，直到基准点的左右只有一个元素为止。它是由</span><br><span class="line">  C.A.R.Hoare于1962年提出的。</span><br><span class="line">  显然快速排序可以用递归实现，当然也可以用栈化解递归实现。下面的</span><br><span class="line">  函数是用递归实现的，有兴趣的朋友可以改成非递归的。</span><br><span class="line">  快速排序是不稳定的。最理想情况算法时间复杂度O(nlog2n)，最坏O(n2)</span><br><span class="line">  =====================================================*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quick_sort</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i, j, t;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> (low &lt; high) <span class="comment">/*要排序的元素起止下标，保证小的放在左边，大的放在右边。这里以下标为low的元素为基准点*/</span></span><br><span class="line">   &#123;</span><br><span class="line">      i = low;</span><br><span class="line">      j = high;</span><br><span class="line">      t = *(x+low); <span class="comment">/*暂存基准点的数*/</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">while</span> (i&lt;j) <span class="comment">/*循环扫描*/</span></span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">while</span> (i&lt;j &amp;&amp; *(x+j)&gt;t) <span class="comment">/*在右边的只要比基准点大仍放在右边*/</span></span><br><span class="line">         &#123;</span><br><span class="line">            j--; <span class="comment">/*前移一个位置*/</span></span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (i&lt;j) </span><br><span class="line">         &#123;</span><br><span class="line">            *(x+i) = *(x+j); <span class="comment">/*上面的循环退出：即出现比基准点小的数，替换基准点的数*/</span></span><br><span class="line">            i++; <span class="comment">/*后移一个位置，并以此为基准点*/</span></span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">while</span> (i&lt;j &amp;&amp; *(x+i)&lt;=t) <span class="comment">/*在左边的只要小于等于基准点仍放在左边*/</span></span><br><span class="line">         &#123;</span><br><span class="line">            i++; <span class="comment">/*后移一个位置*/</span></span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (i&lt;j)</span><br><span class="line">         &#123;</span><br><span class="line">            *(x+j) = *(x+i); <span class="comment">/*上面的循环退出：即出现比基准点大的数，放到右边*/</span></span><br><span class="line">            j--; <span class="comment">/*前移一个位置*/</span></span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      *(x+i) = t; <span class="comment">/*一遍扫描完后，放到适当位置*/</span></span><br><span class="line">      quick_sort(x,low,i-<span class="number">1</span>);  <span class="comment">/*对基准点左边的数再执行快速排序*/</span></span><br><span class="line">      quick_sort(x,i+<span class="number">1</span>,high);  <span class="comment">/*对基准点右边的数再执行快速排序*/</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[git]]></title>
-      <url>http://szwchao.github.com/2015/12/21/git/</url>
-      <content type="html"><![CDATA[<h2 id="u57FA_u672C_u7528_u6CD5"><a href="#u57FA_u672C_u7528_u6CD5" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4"><a href="#u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4" class="headerlink" title="日常使用的6个命令"></a>日常使用的6个命令</h3><p>记住最常用的6个命令就可以了，其它命令太多，用时再查。</p>
-<p><img src="/images/git.png" alt="basic"></p>
-<h3 id="TAG"><a href="#TAG" class="headerlink" title="TAG"></a>TAG</h3><p>打TAG也就是发布版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git tag <span class="operator">-a</span> v1.<span class="number">2</span> -m <span class="string">"version 1.4"</span></span><br><span class="line">$ git push --tags</span><br></pre></td></tr></table></figure>
-<h2 id="u9AD8_u7EA7_u7528_u6CD5"><a href="#u9AD8_u7EA7_u7528_u6CD5" class="headerlink" title="高级用法"></a>高级用法</h2><h4 id="u672C_u5730_u5FFD_u7565"><a href="#u672C_u5730_u5FFD_u7565" class="headerlink" title="本地忽略"></a>本地忽略</h4><p>文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git update-index --assume-unchanged /path/to/file       <span class="comment">#忽略跟踪</span></span><br><span class="line">$ git update-index --no-assume-unchanged /path/to/file    <span class="comment">#恢复跟踪</span></span><br></pre></td></tr></table></figure>
-<p>之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://szwchao.github.com/2015/12/14/hexo/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[markdown]]></title>
-      <url>http://szwchao.github.com/2015/12/14/markdown/</url>
-      <content type="html"><![CDATA[<h2 id="Markdown_u8BED_u6CD5"><a href="#Markdown_u8BED_u6CD5" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><table>
-<thead>
-<tr>
-<th>用处</th>
-<th>语法/介绍</th>
-<th>vimwiki中快捷键</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>标题</td>
-<td>以1-6个<code>#</code>表明6级标题</td>
-<td><kbd>=</kbd>增加标题级别， <kbd>-</kbd>减小标题级别</td>
-<td></td>
-</tr>
-<tr>
-<td>分隔线</td>
-<td>三个或三个以上的<code>----</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>段落</td>
-<td>以一个空行分隔</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>粗体文本</strong></td>
-<td>两个<code>**</code></td>
-<td><strong>vmap</strong> <kbd>*</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td><em>斜体文本</em></td>
-<td><code>*</code>或<code>_</code></td>
-<td><strong>vmap</strong> <kbd>-</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td>代码 (无语法) 文本</td>
-<td><strong>`</strong></td>
-<td><strong>nmap, vmap</strong> <kbd>`</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td>~~删除线 ~~</td>
-<td>暂无</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>无序列表</td>
-<td><code>*</code> 或 <code>-</code>  或 <code>+</code></td>
-<td><em>nmap</em> <kbd>*</kbd></td>
-<td>嵌套列表则要缩进4个空格</td>
-</tr>
-<tr>
-<td>有序列表</td>
-<td>数字开头加点号</td>
-<td><em>nmap</em> <kbd>#</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td>块级引用</td>
-<td><code>&gt;</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>图片链接</td>
-<td><img src="../images/xxx.png" alt="AltName"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DataPoint]]></title>
-      <url>http://szwchao.github.com/2015/12/14/DataPoint/</url>
-      <content type="html"><![CDATA[<p>EnumDataPoint:</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>EnumTypeName</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>actual_alarm</td>
-<td>ALARM_ID</td>
-<td>NO_ALARM</td>
-</tr>
-</tbody>
-</table>
-<p>在EnumTypes表里先定义Type</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>37</td>
-<td>ALARM_ID</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[dc]]></title>
-      <url>http://szwchao.github.com/2015/12/10/dc/</url>
-      <content type="html"><![CDATA[<h1 id="Head_1"><a href="#Head_1" class="headerlink" title="Head 1"></a>Head 1</h1><blockquote>
-<p>摘要文字情侣款饥饿网络蓝军冷空气无金额利润空间全忘了</p>
-</blockquote>
-<p><a href="http://www.baidu.com" target="_blank" rel="external">Baidu</a></p>
-<p><img src="/images/autosar.png" alt=""></p>
-<h2 id="Head_2"><a href="#Head_2" class="headerlink" title="Head 2"></a>Head 2</h2><p>list 1:</p>
-<ul>
-<li>item 1</li>
-<li>item 2</li>
-<li>item 3</li>
-<li>item 4</li>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/12/21/python/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/12/21/git/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
 </ul>
-<h2 id="Head_2-1"><a href="#Head_2-1" class="headerlink" title="Head 2"></a>Head 2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="decorator">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h3 id="Head_3"><a href="#Head_3" class="headerlink" title="Head 3"></a>Head 3</h3><h4 id="Head_4"><a href="#Head_4" class="headerlink" title="Head 4"></a>Head 4</h4><h5 id="Head_5"><a href="#Head_5" class="headerlink" title="Head 5"></a>Head 5</h5><h6 id="Head_6"><a href="#Head_6" class="headerlink" title="Head 6"></a>Head 6</h6><table>
-<thead>
-<tr>
-<th>table</th>
-<th>l</th>
-<th>l</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>c</td>
-<td>rr</td>
-<td>er</td>
-</tr>
-<tr>
-<td>w</td>
-<td>er</td>
-<td>qq</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Test_plantuml"><a href="#Test_plantuml" class="headerlink" title="Test plantuml"></a>Test plantuml</h3><img src="http://www.plantuml.com/plantuml/svg/lLPDJnD16BxtLqp2WV9HemSzW9AKPOjh220j64_DTET55dPtoiniaP0Q4uq92SQB5z6BXiIJ68c98HX-ZQLuyYyutPbfTzikuKGFxSppVipplE--inr55-_FMqTVxzowsthvDZUAk8jzG78hrwtZmp-d--qVPwsFv-t3rvUl3Yu-VF_t--3o_FJYyvlMhvFssRlsyRVMqKzf_Vlbq-N-IOvlUM4TCnmWryUSexqSafzHD8lThMUCHY6ng4yP6h7lbKgM5LkBZD4T1TTywHU3ivGHO4cqcHEUaEIcq9obiWFFgLCgc6zPWldwE2x8r9JlSN6_7DKwjl4P5EZbWeIdOwy6zGXoGaze2yzta35jz9Y8iA-SLg8mxOCUeDk994L2j3rl3XoQ1hPbffxBNdDQYaehi1iG2WJF1OIaNrV1Q7WSGGGQWG3tenEfP8fnZB_8CWm8L6WVtm6ooy0yIZmtW--GjCsSJg5nvJWIr4ra79Teob2I2R0Ceik6Ug40bZVxyTXZHAhe81KlW7uIIpKEh05CqvNPkSkycl1eQE7G1Ty7qf6_2QuOHtMzKWUlrWaMa6MLjFJUi9BVo2EJA2F0ec4eDnMgKPxMQ9WwH2TIblcKPKmz4Wv9b7cdevlDOWvM39XEtRHqXqnUMxd2vJFHeRvKs-oCh88Mew06Z2-jspu4yX7cFQME3jU2vhiiP65wfUp1bTqwf0qhi6x92oev5wOia3VrakpDii_5plPP3VdLYP9Z4OimRKghAWGcn9GaZTXgcEG34Fzs9AgLaQPsSy05exj0-lebArLUdNraMvMgCrUjF5ssqM3ThbVESjfWqiOvXKJ6z9oxtQ8Fjk5cMw1FByasRAGqbd43AZJ6yqxyyuHv8evMYqbKMYYM7rRBnJLRAUGoH0KlK4nAZ0R9y1N090vNY-7XfCZLzRL8XRU-QtWcheL-YptaYesdK9WXT_WQzZrzJqmKXS3kHjOKpq5ixPL10qw6lxqjNtCyqtoDBbwhGmcdOaWqfwlwgLaaXD0wC2paluh2J3vrdsLnTxXo8FaQfJvYm478Fm22HM3Uan8nFgaP600BGTKarzj8kVJQXklrxlZtNz-JYVTcypy0">
-]]></content>
-    </entry>
-    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
   
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-12-21 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/code/">code<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/c/">c<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u5B57_u8282_u5BF9_u9F50"><span class="toc-article-text">字节对齐</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u6307_u9488"><span class="toc-article-text">指针</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u6307_u9488_u7C7B_u578B"><span class="toc-article-text">指针类型</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u6307_u9488_u8FD0_u7B97"><span class="toc-article-text">指针运算</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#u8FD0_u7B97_u7B26_26amp_3B_u548C*"><span class="toc-article-text">运算符&和*</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#u6307_u9488_u957F_u5EA6"><span class="toc-article-text">指针长度</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#u6307_u9488_u8FD0_u7B97-1"><span class="toc-article-text">指针运算</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u6307_u9488_u548C_u6570_u7EC4"><span class="toc-article-text">指针和数组</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u6307_u9488_u548C_u7ED3_u6784"><span class="toc-article-text">指针和结构</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u6307_u9488_u548C_u51FD_u6570"><span class="toc-article-text">指针和函数</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u94FE_u8868"><span class="toc-article-text">链表</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C_u8BED_u8A00_u94FE_u8868_u7684_u4F5C_u7528_uFF1A"><span class="toc-article-text">C语言链表的作用：</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C_u8BED_u8A00_u94FE_u8868_u7684_u6784_u6210"><span class="toc-article-text">C语言链表的构成</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u94FE_u8868_u7684_u5206_u7C7B"><span class="toc-article-text">链表的分类</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u94FE_u8868_u7684_u64CD_u4F5C"><span class="toc-article-text">链表的操作</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u6392_u5E8F"><span class="toc-article-text">排序</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u5192_u6CE1_u6392_u5E8F"><span class="toc-article-text">冒泡排序</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#u5FEB_u6392"><span class="toc-article-text">快排</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 wchao
   
-    
-    <entry>
-      <title><![CDATA[Tags]]></title>
-      <url>http://szwchao.github.com/tags/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Categories]]></title>
-      <url>http://szwchao.github.com/categories/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[About]]></title>
-      <url>http://szwchao.github.com/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
   
-</search>
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
