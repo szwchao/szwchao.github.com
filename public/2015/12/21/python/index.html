@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python | wchao</title>
+  <meta name="author" content="wchao">
+  
+  <meta name="description" content="Python常用数据类型listlist是一种有序的集合，可以随时添加和删除其中的元素。
+列表常用方法：
+
+用len()函数可以获得list元素的个数
+用索引来访问list中每一个位置的元素： 第一个a[0]，倒数第一个a[-1]
+追加元素到末尾：a.append(&amp;#39;xxx&amp;#39;)
+插入">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="python"/>
+  <meta property="og:site_name" content="wchao"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.ico" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">wchao</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> python</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="u5E38_u7528_u6570_u636E_u7C7B_u578B"><a href="#u5E38_u7528_u6570_u636E_u7C7B_u578B" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
+<p>列表常用方法：</p>
+<ul>
+<li>用len()函数可以获得list元素的个数</li>
+<li>用索引来访问list中每一个位置的元素： 第一个<code>a[0]</code>，倒数第一个<code>a[-1]</code></li>
+<li>追加元素到末尾：<code>a.append(&#39;xxx&#39;)</code></li>
+<li>插入到指定的位置，比如索引号为1的位置：<code>a.insert(1, &#39;yyy&#39;)</code></li>
+<li>删除list末尾的元素：<code>a.pop()</code>，或者删除指定位置的元素：<code>a.pop(1)</code></li>
+</ul>
+<h3 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h3><p>元组和列表类似，但是tuple一旦初始化就不能修改。</p>
+<p>但如果像下面的例子：tuple里的list可以改变。原因是第三个其实是指向list的一个元素，而该list指向<code>[&#39;A&#39;, &#39;B&#39;]</code>，指向的list不可以变，但list指向的值可以变</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t = (<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'A'</span>, <span class="string">'B'</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t[<span class="number">2</span>][<span class="number">0</span>] = <span class="string">'X'</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t[<span class="number">2</span>][<span class="number">1</span>] = <span class="string">'Y'</span></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>t</span><br><span class="line">(<span class="string">'a'</span>, <span class="string">'b'</span>, [<span class="string">'X'</span>, <span class="string">'Y'</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>字典是key-value哈希的，所以key不能有重复，并且必须是字符串，整数等不可变的可以哈希的类型，list就不能作为key。</p>
+<p>字典常用方法：</p>
+<ul>
+<li>赋值： <code>d[&#39;a&#39;] = 1</code></li>
+<li>取值： <code>d[&#39;a&#39;]</code><ul>
+<li>如果键值不存在，会抛出异常：KeyError。用<code>in</code>判断键值，或者用<code>d.get(&#39;a&#39;, 0)</code>，如果key不存在，返回指定value。</li>
+</ul>
+</li>
+<li>删除一个key： <code>d.pop(&#39;a&#39;)</code></li>
+</ul>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h4 id="Python_u6D4B_u8BD5_u7A0B_u5E8F_u8FD0_u884C_u65F6_u95F4"><a href="#Python_u6D4B_u8BD5_u7A0B_u5E8F_u8FD0_u884C_u65F6_u95F4" class="headerlink" title="Python测试程序运行时间"></a>Python测试程序运行时间</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">start = time.time()</span><br><span class="line">run_fun()</span><br><span class="line">end = time.time()</span><br><span class="line"><span class="keyword">print</span> end-start</span><br></pre></td></tr></table></figure>
+<h4 id="u6B63_u5219"><a href="#u6B63_u5219" class="headerlink" title="正则"></a>正则</h4><p>正则表达式使用反斜杠” \ “来代表特殊形式或用作转义字符，这里跟Python的语法冲突，因此，Python用” \\ “表示正则表达式中的” \ “，因为正则表达式中如果要匹配” \ “，需要用\来转义，变成” \ “，而Python语法中又需要对字符串中每一个\进行转义，所以就变成了” \\ “。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/12/24/vimwiki/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/12/21/c/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-12-21 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/code/">code<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/python/">python<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Python"><span class="toc-article-text">Python</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u5E38_u7528_u6570_u636E_u7C7B_u578B"><span class="toc-article-text">常用数据类型</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#list"><span class="toc-article-text">list</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#tuple"><span class="toc-article-text">tuple</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#dict"><span class="toc-article-text">dict</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#tips"><span class="toc-article-text">tips</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Python_u6D4B_u8BD5_u7A0B_u5E8F_u8FD0_u884C_u65F6_u95F4"><span class="toc-article-text">Python测试程序运行时间</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#u6B63_u5219"><span class="toc-article-text">正则</span></a></li></ol></li></ol></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 wchao
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
