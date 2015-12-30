@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vimwiki | wchao</title>
+  <meta name="author" content="wchao">
+  
+  <meta name="description" content="基本语法
+
+
+用处
+语法/介绍
+快捷键
+
+
+
+
+标题
+=
+=增加标题级别， -减小标题级别
+
+
+段落
+以一个空行分隔
+
+
+
+粗体文本
+*
+vmap *
+
+
+斜体文本
+_
+vmap -
+
+
+代码 (无语法) 文本
+`
+nmap, vmap `
+
+
+~~删除线 ~~
+~~
+
+
+
+上标^脚本^
+xx^yy^
+
+
+
+下标,,脚本,,
+xx,,yy,,
+
+
+
+无序列表
+* 或 -
+nmap *
+
+
+有序列表
+#
+nmap #
+
+
+Todo列表
+* [ ]
+nmap [ 切换开关 Space
+
+
+术语定义
+术语 1:: 定义 1
+
+
+
+预格式化
+三个{以及三个}
+nmap, vmap {
+
+
+块级引用
+以4个以上空格开始的文本
+
+
+
+注释
+以%%开始的文本
+
+
+
+水平分隔行
+----">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="vimwiki"/>
+  <meta property="og:site_name" content="wchao"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.ico" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">wchao</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="文章归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="文章分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> vimwiki</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h2 id="u57FA_u672C_u8BED_u6CD5"><a href="#u57FA_u672C_u8BED_u6CD5" class="headerlink" title="基本语法"></a>基本语法</h2><table>
+<thead>
+<tr>
+<th>用处</th>
+<th>语法/介绍</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标题</td>
+<td><code>=</code></td>
+<td><code>=</code>增加标题级别， <code>-</code>减小标题级别</td>
+</tr>
+<tr>
+<td>段落</td>
+<td>以一个空行分隔</td>
+<td></td>
+</tr>
+<tr>
+<td><em>粗体文本</em></td>
+<td><code>*</code></td>
+<td><em>vmap</em> <code>*</code></td>
+</tr>
+<tr>
+<td><em>斜体文本</em></td>
+<td><code>_</code></td>
+<td><em>vmap</em> <code>-</code></td>
+</tr>
+<tr>
+<td>代码 (无语法) 文本</td>
+<td>`</td>
+<td><em>nmap, vmap</em> `</td>
+</tr>
+<tr>
+<td>~~删除线 ~~</td>
+<td><code>~~</code></td>
+<td></td>
+</tr>
+<tr>
+<td>上标^脚本^</td>
+<td><code>xx^yy^</code></td>
+<td></td>
+</tr>
+<tr>
+<td>下标,,脚本,,</td>
+<td><code>xx,,yy,,</code></td>
+<td></td>
+</tr>
+<tr>
+<td>无序列表</td>
+<td><code>*</code> 或 <code>-</code></td>
+<td><em>nmap</em> <code>*</code></td>
+</tr>
+<tr>
+<td>有序列表</td>
+<td><code>#</code></td>
+<td><em>nmap</em> <code>#</code></td>
+</tr>
+<tr>
+<td>Todo列表</td>
+<td><code>* [ ]</code></td>
+<td><em>nmap</em> <code>[</code> 切换开关 <code>Space</code></td>
+</tr>
+<tr>
+<td>术语定义</td>
+<td><code>术语 1:: 定义 1</code></td>
+<td></td>
+</tr>
+<tr>
+<td>预格式化</td>
+<td>三个<code>{</code>以及三个<code>}</code></td>
+<td><em>nmap, vmap</em> <code>{</code></td>
+</tr>
+<tr>
+<td>块级引用</td>
+<td>以4个以上空格开始的文本</td>
+<td></td>
+</tr>
+<tr>
+<td>注释</td>
+<td>以%%开始的文本</td>
+<td></td>
+</tr>
+<tr>
+<td>水平分隔行</td>
+<td><code>----</code></td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h2 id="u5FEB_u6377_u952E"><a href="#u5FEB_u6377_u952E" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><leader>ww</leader></td>
+<td>从 g:vimwiki_list 打开第一个 wiki。</td>
+</tr>
+<tr>
+<td><leader>ws</leader></td>
+<td>列出可选择的 wiki 列表。</td>
+</tr>
+<tr>
+<td><leader>wh</leader></td>
+<td>转换当前 wiki 页面为 HTML。</td>
+</tr>
+<tr>
+<td><leader>whh</leader></td>
+<td>转换当前 wiki 页面为 HTML 并在浏览器中打开。</td>
+</tr>
+<tr>
+<td><leader>wd</leader></td>
+<td>删除光标所在的 Wiki 词条。</td>
+</tr>
+<tr>
+<td><leader>wr</leader></td>
+<td>重命名光标所在的 Wiki 词条。</td>
+</tr>
+<tr>
+<td><leader>wi</leader></td>
+<td>打开日记索引。</td>
+</tr>
+<tr>
+<td><leader>w<leader>w</leader></leader></td>
+<td>打开list里第一个 wiki 日记文件日记。</td>
+</tr>
+<tr>
+<td><tab></tab></td>
+<td>寻找并将光标定位到本页的下一个 Wiki 词条。</td>
+</tr>
+<tr>
+<td><s-tab></s-tab></td>
+<td>寻找并将光标定位到本页的上一个 Wiki 词条。</td>
+</tr>
+<tr>
+<td>gqq</td>
+<td>格式化表格。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u94FE_u63A5"><a href="#u94FE_u63A5" class="headerlink" title="链接"></a>链接</h2><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>介绍</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部链接</td>
+<td><code>[[链接源地址/(竖杠)链接描述]]</code> 或 <code>[[链接源地址][链接描述]]</code></td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>外部链接</td>
+<td>纯链接：       &gt;  <a href="http://code.google.com/p/vimwiki" target="_blank" rel="external">http://code.google.com/p/vimwiki</a></td>
+<td><code>http://code.google.com/p/vimwiki</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>带描述的链接： &gt;  [<a href="http://www.weibo.com" target="_blank" rel="external">http://www.weibo.com</a> 新浪微博]</td>
+<td><code>[http://www.weibo.com 新浪微博]</code></td>
+</tr>
+<tr>
+<td>图片及图片链接</td>
+<td>纯图片链接</td>
+<td><code>http://someaddr.com/pic.jpg</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>本地图片链接</td>
+<td><code>[[images/pabloymoira.jpg]]</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>双中括号内的图片链接</td>
+<td><code>[[http://somaddr.com/pic.jpg]]</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>双中括号内带描述信息的图片链接</td>
+<td><code>[[http://somaddr.com/pic.jpg(竖杠)dance]]</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>双中括号内带备用信息和一些样式的图片链接</td>
+<td><code>[[http://somaddr.com/pic.jpg(竖杠)dance(竖杠)cool stuff(竖杠)width:150px; height: 120px;]]</code></td>
+</tr>
+<tr>
+<td>\/</td>
+<td>缩略图链接</td>
+<td><code>[http://someaddr.com/bigpicture.jpg http://someaddr.com/thumbnail.jpg]</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="u8868_u683C"><a href="#u8868_u683C" class="headerlink" title="表格"></a>表格</h2><p><code>:VimwikiTable 2 2</code>插入二行二列的表格</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> 年   </span>|<span class="string"> 最低温度 </span>|<span class="string"> 最高温度 </span>|</span><br><span class="line">|<span class="string">------+----------+----------</span>|</span><br><span class="line">|<span class="string"> 1900 </span>|<span class="string"> -10      </span>|<span class="string"> 25       </span>|</span><br><span class="line">|<span class="string"> 1910 </span>|<span class="string"> -15      </span>|<span class="string"> 30       </span>|</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>年</th>
+<th>最低温度</th>
+<th>最高温度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1900</td>
+<td>-10</td>
+<td>25</td>
+</tr>
+<tr>
+<td>1910</td>
+<td>-15</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>如果在单元格中写入 <code>&gt;</code>，这个单元格会被合并到左边的列中。 如果在单元格中输入 <code>\/</code>，这个单元格会被合并到上面一行。</p>
+<p>例如：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> a  </span>|<span class="string"> b  </span>|<span class="string"> c </span>|<span class="string"> d </span>|</span><br><span class="line">|<span class="string"> \/ </span>|<span class="string"> e  </span>|<span class="string"> &gt; </span>|<span class="string"> f </span>|</span><br><span class="line">|<span class="string"> \/ </span>|<span class="string"> \/ </span>|<span class="string"> &gt; </span>|<span class="string"> g </span>|</span><br><span class="line">|<span class="string"> h  </span>|<span class="string"> &gt;  </span>|<span class="string"> &gt; </span>|<span class="string"> &gt; </span>|</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\/</td>
+<td>e</td>
+<td>&gt;</td>
+<td>f</td>
+</tr>
+<tr>
+<td>\/</td>
+<td>\/</td>
+<td>&gt;</td>
+<td>g</td>
+</tr>
+<tr>
+<td>h</td>
+<td>&gt;</td>
+<td>&gt;</td>
+<td>&gt;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/12/25/vim/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/12/21/python/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-12-24 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/tools/">tools<span>4</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/tools/">tools<span>3</span></a></li> <li><a href="/tags/vim/">vim<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u57FA_u672C_u8BED_u6CD5"><span class="toc-article-text">基本语法</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u5FEB_u6377_u952E"><span class="toc-article-text">快捷键</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u94FE_u63A5"><span class="toc-article-text">链接</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u8868_u683C"><span class="toc-article-text">表格</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 wchao
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
