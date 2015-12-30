@@ -13,13 +13,75 @@ toc: true
 
 ![basic](/images/git.png)
 
+<!-- more -->
+
+### 创建并添加远端版本库
+```
+git init
+git remote add origin https://github.com/szwchao/szwchao.github.com.git
+```
+
+### 从已有的git库中提取代码
+
+```
+git clone git@github.com:szwchao/szwchao.github.com.git
+```
+
+### 发布代码
+
+```
+git add .
+git commit -m "first commit"
+git push -u origin master
+```
+
+或者直接在commit后加`-a`，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交
+
+```
+git commit -a -m 'xxx'
+```
+
+### 从远程仓库中拉取
+
+`git pull`是`git fetch`和`git merge`命令的一个组合
+
+```
+git pull
+```
+
+### 撤销
+
+如果已经添加了一个文件到暂存区，想从暂存区撤销，但同时在工作区里保留该文件
+
+```
+git reset HEAD filename
+```
+
+撤消对文件的修改
+
+```
+git checkout -- filename
+```
+
 ### TAG
 
 打TAG也就是发布版本
 
+```
+git tag -a v1.2 -m "version 1.2"
+git push --tags
+```
+
+标签详情
+
 ```bash
-$ git tag -a v1.2 -m "version 1.4"
-$ git push --tags
+git show v1.2
+```
+
+后期打标签
+
+```
+git tag -a v1.2 9fceb02
 ```
 
 ## 高级用法
@@ -28,9 +90,39 @@ $ git push --tags
 
 文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：
 
-```bash
-$ git update-index --assume-unchanged /path/to/file       #忽略跟踪
-$ git update-index --no-assume-unchanged /path/to/file    #恢复跟踪
+```
+git update-index --assume-unchanged /path/to/file       #忽略跟踪
+git update-index --no-assume-unchanged /path/to/file    #恢复跟踪
 ```
 
 之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。
+
+## 配置
+
+配置编辑器
+
+```
+git config --global core.editor gvim
+```
+
+`git commit`就可以用vim来编辑commit内容了
+
+配置diff工具
+
+```
+git config --global diff.tool gvimdiff
+```
+
+配置merge工具
+```
+git config --global merge.tool gvimdiff
+```
+
+git别名
+
+```bash
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+```

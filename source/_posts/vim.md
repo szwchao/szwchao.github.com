@@ -21,6 +21,8 @@ Vim中有一些特殊变量，包括：
 * %< - 当前文件名，去后缀
 * <cword> - 光标所在的单词
 
+<!-- more -->
+
 ## 表达式
 
 数值、字符串都是表达式，其他常见的表达式包括：
@@ -40,13 +42,16 @@ Vim中有一些特殊变量，包括：
 ```
 
 ## 配色
-    * 列出所有rgb.txt里的配色<br />
-    自己写的命令 `DisplayAllColors`
-    * 列出当前配色<br />
-    `so $VIMRUNTIME/syntax/hitest.vim`
-    * 列出高亮组最近在哪里设置<br />
-    `verbose hi Comment`
-    
+
+* 列出所有rgb.txt里的配色
+自己写的命令 `DisplayAllColors`
+
+* 列出当前配色
+`so $VIMRUNTIME/syntax/hitest.vim`
+
+* 列出高亮组最近在哪里设置
+`verbose hi Comment`
+
 ## 正则
 
 * 文本里

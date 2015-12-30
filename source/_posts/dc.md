@@ -1,7 +1,7 @@
 title: dc
 date: 2015-12-10 15:49:48
 tags: [work, dc]
-categories: [Work, DC]
+categories: work
 toc: true
 ---
 

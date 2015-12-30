@@ -26,6 +26,8 @@ struct A
 sizeof(struct A) = 12;
 ```
 
+<!-- more -->
+
 看图
 
 ![对齐](/images/c_align.jpg)
