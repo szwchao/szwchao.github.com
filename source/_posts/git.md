@@ -51,16 +51,32 @@ git pull
 
 ### 撤销
 
+如果还没有添加到暂存区，撤消对文件的修改
+
+```
+git checkout -- filename
+```
+
 如果已经添加了一个文件到暂存区，想从暂存区撤销，但同时在工作区里保留该文件
 
 ```
 git reset HEAD filename
 ```
 
-撤消对文件的修改
+### 版本回退
+
+想要撤回到上一个版本
 
 ```
-git checkout -- filename
+git reset --hard commit_id
+```
+
+### 删除
+
+从版本库里删除一个文件
+
+```
+git rm filename
 ```
 
 ### TAG
