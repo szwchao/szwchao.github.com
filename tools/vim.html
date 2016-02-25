@@ -3,92 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>markdown | wchao</title>
+  <title>vim | wchao</title>
   <meta name="author" content="wchao">
   
-  <meta name="description" content="Markdown语法
+  <meta name="description" content="变量几种不同的变量：
 
+b:name - buffer缓冲区的变量
+w:name - window变量
+g:name - 全局变量
+v:name - Vim预定义变量
+s:name - 作用域是当前脚本的变量
 
-用处
-语法/介绍
-快捷键
-说明
+Vim中有一些特殊变量，包括：
 
-
-
-
-标题
-以1-6个#表明6级标题
-=增加标题级别， -减小标题级别
-
-
-
-分隔线
-三个或三个以上的----
-
-
-
-
-段落
-以一个空行分隔
-
-
-
-
-粗体文本
-两个**
-vmap *
-
-
-
-斜体文本
-*或_
-vmap -
-
-
-
-代码 (无语法) 文本
-`
-nmap, vmap `
-
-
-
-删除线
-两个~~
-
-
-
-
-无序列表
-* 或 -  或 +
-nmap *
-嵌套列表则要缩进4个空格
-
-
-有序列表
-数字开头加点号
-
-
-
-
-引用
-&amp;gt;
-
-
-
-
-链接
-Baidu
-
-
-
-
-图片链接">
+% - 当前文件名
+%&amp;lt; - 当前文件名，去后缀
+ - 光标所在的单词">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="markdown"/>
+  <meta property="og:title" content="vim"/>
   <meta property="og:site_name" content="wchao"/>
 
   
@@ -167,7 +102,7 @@ Baidu
 
 	
 		<div class="page-header">		
-			<h1> markdown</h1>
+			<h1> vim</h1>
 		</div>		
 	
 
@@ -184,90 +119,46 @@ Baidu
 	<div class="mypage">		
 	  		
 
-	  <h2 id="Markdown_u8BED_u6CD5"><a href="#Markdown_u8BED_u6CD5" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><table>
-<thead>
-<tr>
-<th>用处</th>
-<th>语法/介绍</th>
-<th>快捷键</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>标题</td>
-<td>以1-6个<code>#</code>表明6级标题</td>
-<td><kbd>=</kbd>增加标题级别， <kbd>-</kbd>减小标题级别</td>
-<td></td>
-</tr>
-<tr>
-<td>分隔线</td>
-<td>三个或三个以上的<code>----</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>段落</td>
-<td>以一个空行分隔</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>粗体文本</strong></td>
-<td>两个<code>**</code></td>
-<td><strong>vmap</strong> <kbd>*</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td><em>斜体文本</em></td>
-<td><code>*</code>或<code>_</code></td>
-<td><strong>vmap</strong> <kbd>-</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td>代码 (无语法) 文本</td>
-<td><strong>`</strong></td>
-<td><strong>nmap, vmap</strong> <kbd>`</kbd></td>
-<td></td>
-</tr>
-<tr>
-<td><del>删除线</del></td>
-<td>两个<code>~~</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>无序列表</td>
-<td><code>*</code> 或 <code>-</code>  或 <code>+</code></td>
-<td><strong>nmap</strong> <kbd>*</kbd></td>
-<td>嵌套列表则要缩进4个空格</td>
-</tr>
-<tr>
-<td>有序列表</td>
-<td>数字开头加点号</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>引用</td>
-<td><code>&gt;</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>链接</td>
-<td><a href="http://www.baidu.com" target="_blank" rel="external">Baidu</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>图片链接</td>
-<td><img src="../images/xxx.png" alt="AltName"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+	  <h2 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h2><p>几种不同的变量：</p>
+<ul>
+<li>b:name - buffer缓冲区的变量</li>
+<li>w:name - window变量</li>
+<li>g:name - 全局变量</li>
+<li>v:name - Vim预定义变量</li>
+<li>s:name - 作用域是当前脚本的变量</li>
+</ul>
+<p>Vim中有一些特殊变量，包括：</p>
+<ul>
+<li>% - 当前文件名</li>
+<li>%&lt; - 当前文件名，去后缀</li>
+<li><cword> - 光标所在的单词</cword></li>
+</ul>
 <a id="more"></a>
+<h2 id="u8868_u8FBE_u5F0F"><a href="#u8868_u8FBE_u5F0F" class="headerlink" title="表达式"></a>表达式</h2><p>数值、字符串都是表达式，其他常见的表达式包括：</p>
+<ul>
+<li>$name - 环境变量名</li>
+<li>&amp;name - Vim选项名</li>
+<li>@r - Vim寄存器名</li>
+</ul>
+<h2 id="u540C_u65F6_u5BF9_u51E0_u4E2A_u6587_u4EF6_u64CD_u4F5C"><a href="#u540C_u65F6_u5BF9_u51E0_u4E2A_u6587_u4EF6_u64CD_u4F5C" class="headerlink" title="同时对几个文件操作"></a>同时对几个文件操作</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:args *.c</span><br><span class="line">:argdo set ff=unix | update</span><br><span class="line">:args *.[ch]</span><br><span class="line">:argdo %s/\&lt;my_foo\&gt;/My_Foo/ge | update</span><br></pre></td></tr></table></figure>
+<h2 id="u5728Visual_u6A21_u5F0F_u91CC_u66FF_u6362"><a href="#u5728Visual_u6A21_u5F0F_u91CC_u66FF_u6362" class="headerlink" title="在Visual模式里替换"></a>在Visual模式里替换</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">music</span> amuse fuse refuse</span><br></pre></td></tr></table></figure>
+<p>替换us为az，先用Visual选择模式或列模式里选中要替换的文本，然后ESC回到normal模式，再执行</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="regexp">s/\%Vus/az/g</span></span><br></pre></td></tr></table></figure>
+<h2 id="u914D_u8272"><a href="#u914D_u8272" class="headerlink" title="配色"></a>配色</h2><ul>
+<li><p>列出所有rgb.txt里的配色<br>自己写的命令 <code>DisplayAllColors</code></p>
+</li>
+<li><p>列出当前配色<br><code>so $VIMRUNTIME/syntax/hitest.vim</code></p>
+</li>
+<li><p>列出高亮组最近在哪里设置<br><code>verbose hi Comment</code></p>
+</li>
+</ul>
+<h2 id="u6B63_u5219"><a href="#u6B63_u5219" class="headerlink" title="正则"></a>正则</h2><ul>
+<li><p>文本里</p>
+</li>
+<li><p>脚本里</p>
+</li>
+</ul>
+<p><code>matchstr({expr}, {pat}[, {start}[, {count}]])            *matchstr()*</code></p>
 	  
 	</div>
 
@@ -276,14 +167,14 @@ Baidu
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2015/12/21/git/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2015/12/10/dc/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/tools/vimwiki.html" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -310,7 +201,7 @@ Baidu
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2015-12-14 
+	2015-12-25 
 	</div>
 	
 
@@ -334,7 +225,7 @@ Baidu
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/markdown/">markdown<span>1</span></a></li> <li><a href="/tags/tools/">tools<span>3</span></a></li>
+  <li><a href="/tags/tools/">tools<span>3</span></a></li> <li><a href="/tags/vim/">vim<span>2</span></a></li>
     </ul>
 	</div>
 		
@@ -344,7 +235,7 @@ Baidu
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Markdown_u8BED_u6CD5"><span class="toc-article-text">Markdown语法</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u53D8_u91CF"><span class="toc-article-text">变量</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u8868_u8FBE_u5F0F"><span class="toc-article-text">表达式</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u540C_u65F6_u5BF9_u51E0_u4E2A_u6587_u4EF6_u64CD_u4F5C"><span class="toc-article-text">同时对几个文件操作</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u5728Visual_u6A21_u5F0F_u91CC_u66FF_u6362"><span class="toc-article-text">在Visual模式里替换</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u914D_u8272"><span class="toc-article-text">配色</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#u6B63_u5219"><span class="toc-article-text">正则</span></a></li></ol>
 		</div>
 	
 	</div>

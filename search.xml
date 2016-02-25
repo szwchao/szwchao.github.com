@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[vim]]></title>
-      <url>http://szwchao.github.com/2015/12/25/vim/</url>
+      <url>http://szwchao.github.com/tools/vim.html</url>
       <content type="html"><![CDATA[<h2 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h2><p>几种不同的变量：</p>
 <ul>
 <li>b:name - buffer缓冲区的变量</li>
@@ -28,6 +28,9 @@
 <li>@r - Vim寄存器名</li>
 </ul>
 <h2 id="u540C_u65F6_u5BF9_u51E0_u4E2A_u6587_u4EF6_u64CD_u4F5C"><a href="#u540C_u65F6_u5BF9_u51E0_u4E2A_u6587_u4EF6_u64CD_u4F5C" class="headerlink" title="同时对几个文件操作"></a>同时对几个文件操作</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:args *.c</span><br><span class="line">:argdo set ff=unix | update</span><br><span class="line">:args *.[ch]</span><br><span class="line">:argdo %s/\&lt;my_foo\&gt;/My_Foo/ge | update</span><br></pre></td></tr></table></figure>
+<h2 id="u5728Visual_u6A21_u5F0F_u91CC_u66FF_u6362"><a href="#u5728Visual_u6A21_u5F0F_u91CC_u66FF_u6362" class="headerlink" title="在Visual模式里替换"></a>在Visual模式里替换</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">music</span> amuse fuse refuse</span><br></pre></td></tr></table></figure>
+<p>替换us为az，先用Visual选择模式或列模式里选中要替换的文本，然后ESC回到normal模式，再执行</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="regexp">s/\%Vus/az/g</span></span><br></pre></td></tr></table></figure>
 <h2 id="u914D_u8272"><a href="#u914D_u8272" class="headerlink" title="配色"></a>配色</h2><ul>
 <li><p>列出所有rgb.txt里的配色<br>自己写的命令 <code>DisplayAllColors</code></p>
 </li>
@@ -48,7 +51,7 @@
     
     <entry>
       <title><![CDATA[vimwiki]]></title>
-      <url>http://szwchao.github.com/2015/12/24/vimwiki/</url>
+      <url>http://szwchao.github.com/tools/vimwiki.html</url>
       <content type="html"><![CDATA[<h2 id="u57FA_u672C_u8BED_u6CD5"><a href="#u57FA_u672C_u8BED_u6CD5" class="headerlink" title="基本语法"></a>基本语法</h2><table>
 <thead>
 <tr>
@@ -314,7 +317,7 @@
     
     <entry>
       <title><![CDATA[python]]></title>
-      <url>http://szwchao.github.com/2015/12/21/python/</url>
+      <url>http://szwchao.github.com/code/python.html</url>
       <content type="html"><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="u5E38_u7528_u6570_u636E_u7C7B_u578B"><a href="#u5E38_u7528_u6570_u636E_u7C7B_u578B" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
 <p>列表常用方法：</p>
 <ul>
@@ -345,7 +348,7 @@
     
     <entry>
       <title><![CDATA[c语言]]></title>
-      <url>http://szwchao.github.com/2015/12/21/c/</url>
+      <url>http://szwchao.github.com/code/c.html</url>
       <content type="html"><![CDATA[<h3 id="u5B57_u8282_u5BF9_u9F50"><a href="#u5B57_u8282_u5BF9_u9F50" class="headerlink" title="字节对齐"></a>字节对齐</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种</span></span><br><span class="line"><span class="keyword">struct</span> A</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">short</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">sizeof</span>(<span class="keyword">struct</span> A) = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>看图</p>
@@ -458,7 +461,7 @@
     
     <entry>
       <title><![CDATA[git]]></title>
-      <url>http://szwchao.github.com/2015/12/21/git/</url>
+      <url>http://szwchao.github.com/tools/git.html</url>
       <content type="html"><![CDATA[<h2 id="u57FA_u672C_u7528_u6CD5"><a href="#u57FA_u672C_u7528_u6CD5" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4"><a href="#u65E5_u5E38_u4F7F_u7528_u76846_u4E2A_u547D_u4EE4" class="headerlink" title="日常使用的6个命令"></a>日常使用的6个命令</h3><p>记住最常用的6个命令就可以了，其它命令太多，用时再查。</p>
 <p><img src="/images/git.png" alt="basic"></p>
 <a id="more"></a>
@@ -483,23 +486,26 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show v1.<span class="number">2</span></span><br></pre></td></tr></table></figure>
 <p>后期打标签</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">tag</span> <span class="title">-a</span> v1.<span class="number">2</span> <span class="number">9</span>fceb02</span><br></pre></td></tr></table></figure>
-<h2 id="u9AD8_u7EA7_u7528_u6CD5"><a href="#u9AD8_u7EA7_u7528_u6CD5" class="headerlink" title="高级用法"></a>高级用法</h2><h4 id="u672C_u5730_u5FFD_u7565"><a href="#u672C_u5730_u5FFD_u7565" class="headerlink" title="本地忽略"></a>本地忽略</h4><p>文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">update</span>-<span class="built_in">index</span> --assume-unchanged /path/<span class="keyword">to</span>/<span class="keyword">file</span>       #忽略跟踪</span><br><span class="line">git <span class="keyword">update</span>-<span class="built_in">index</span> --<span class="keyword">no</span>-assume-unchanged /path/<span class="keyword">to</span>/<span class="keyword">file</span>    #恢复跟踪</span><br></pre></td></tr></table></figure>
-<p>之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。</p>
 <h2 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h2><p>配置编辑器</p>
 <figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.<span class="keyword">editor</span> gvim</span><br></pre></td></tr></table></figure>
 <p><code>git commit</code>就可以用vim来编辑commit内容了</p>
 <p>配置diff工具</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global diff<span class="class">.tool</span> gvimdiff</span><br></pre></td></tr></table></figure>
-<p>配置merge工具<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> <span class="keyword">merge</span>.tool gvimdiff</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global diff<span class="class">.tool</span> gvimdiff</span><br><span class="line"></span><br><span class="line">git config --global diff<span class="class">.tool</span> bc3</span><br><span class="line">git config --global difftool<span class="class">.bc3</span><span class="class">.path</span> <span class="string">"c:/Program Files (x86)/Beyond Compare 3/bcomp.exe"</span></span><br></pre></td></tr></table></figure>
+<p>配置merge工具<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global merge<span class="class">.tool</span> gvimdiff</span><br><span class="line"></span><br><span class="line">git config --global merge<span class="class">.tool</span> bc3</span><br><span class="line">git config --global mergetool<span class="class">.bc3</span><span class="class">.path</span> <span class="string">"c:/Program Files (x86)/Beyond Compare 3/bcomp.exe"</span></span><br></pre></td></tr></table></figure></p>
 <p>git别名</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
+<h2 id="u9AD8_u7EA7_u7528_u6CD5"><a href="#u9AD8_u7EA7_u7528_u6CD5" class="headerlink" title="高级用法"></a>高级用法</h2><h4 id="u672C_u5730_u5FFD_u7565"><a href="#u672C_u5730_u5FFD_u7565" class="headerlink" title="本地忽略"></a>本地忽略</h4><p>文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">update</span>-<span class="built_in">index</span> --assume-unchanged /path/<span class="keyword">to</span>/<span class="keyword">file</span>       #忽略跟踪</span><br><span class="line">git <span class="keyword">update</span>-<span class="built_in">index</span> --<span class="keyword">no</span>-assume-unchanged /path/<span class="keyword">to</span>/<span class="keyword">file</span>    #恢复跟踪</span><br></pre></td></tr></table></figure>
+<p>之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。</p>
+<h4 id="u6253_u5305_u4FEE_u6539_u8FC7_u7684_u5185_u5BB9"><a href="#u6253_u5305_u4FEE_u6539_u8FC7_u7684_u5185_u5BB9" class="headerlink" title="打包修改过的内容"></a>打包修改过的内容</h4><p>当前修改过的文件，没有commit，打包成一个压缩包：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --name-only  | xargs <span class="keyword">zip</span> <span class="keyword">update</span>.<span class="keyword">zip</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5176_u5B83"><a href="#u5176_u5B83" class="headerlink" title="其它"></a>其它</h2><p>用<a href="https://github.com/holygeek/git-number" target="_blank" rel="external">这个插件</a>使git status支持列出的文件前加上数字，然后<code>git number add x</code>即可。</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[markdown]]></title>
-      <url>http://szwchao.github.com/2015/12/14/markdown/</url>
+      <url>http://szwchao.github.com/tools/markdown.html</url>
       <content type="html"><![CDATA[<h2 id="Markdown_u8BED_u6CD5"><a href="#Markdown_u8BED_u6CD5" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><table>
 <thead>
 <tr>
@@ -589,7 +595,7 @@
     
     <entry>
       <title><![CDATA[dc]]></title>
-      <url>http://szwchao.github.com/2015/12/10/dc/</url>
+      <url>http://szwchao.github.com/work/dc.html</url>
       <content type="html"><![CDATA[<h1 id="Head_1"><a href="#Head_1" class="headerlink" title="Head 1"></a>Head 1</h1><blockquote>
 <p>摘要文字情侣款饥饿网络蓝军冷空气无金额利润空间全忘了</p>
 </blockquote>
@@ -625,6 +631,7 @@
 </tbody>
 </table>
 <h3 id="Test_plantuml"><a href="#Test_plantuml" class="headerlink" title="Test plantuml"></a>Test plantuml</h3><img src="http://www.plantuml.com/plantuml/svg/lLPDJnD16BxtLqp2WV9HemSzW9AKPOjh220j64_DTET55dPtoiniaP0Q4uq92SQB5z6BXiIJ68c98HX-ZQLuyYyutPbfTzikuKGFxSppVipplE--inr55-_FMqTVxzowsthvDZUAk8jzG78hrwtZmp-d--qVPwsFv-t3rvUl3Yu-VF_t--3o_FJYyvlMhvFssRlsyRVMqKzf_Vlbq-N-IOvlUM4TCnmWryUSexqSafzHD8lThMUCHY6ng4yP6h7lbKgM5LkBZD4T1TTywHU3ivGHO4cqcHEUaEIcq9obiWFFgLCgc6zPWldwE2x8r9JlSN6_7DKwjl4P5EZbWeIdOwy6zGXoGaze2yzta35jz9Y8iA-SLg8mxOCUeDk994L2j3rl3XoQ1hPbffxBNdDQYaehi1iG2WJF1OIaNrV1Q7WSGGGQWG3tenEfP8fnZB_8CWm8L6WVtm6ooy0yIZmtW--GjCsSJg5nvJWIr4ra79Teob2I2R0Ceik6Ug40bZVxyTXZHAhe81KlW7uIIpKEh05CqvNPkSkycl1eQE7G1Ty7qf6_2QuOHtMzKWUlrWaMa6MLjFJUi9BVo2EJA2F0ec4eDnMgKPxMQ9WwH2TIblcKPKmz4Wv9b7cdevlDOWvM39XEtRHqXqnUMxd2vJFHeRvKs-oCh88Mew06Z2-jspu4yX7cFQME3jU2vhiiP65wfUp1bTqwf0qhi6x92oev5wOia3VrakpDii_5plPP3VdLYP9Z4OimRKghAWGcn9GaZTXgcEG34Fzs9AgLaQPsSy05exj0-lebArLUdNraMvMgCrUjF5ssqM3ThbVESjfWqiOvXKJ6z9oxtQ8Fjk5cMw1FByasRAGqbd43AZJ6yqxyyuHv8evMYqbKMYYM7rRBnJLRAUGoH0KlK4nAZ0R9y1N090vNY-7XfCZLzRL8XRU-QtWcheL-YptaYesdK9WXT_WQzZrzJqmKXS3kHjOKpq5ixPL10qw6lxqjNtCyqtoDBbwhGmcdOaWqfwlwgLaaXD0wC2paluh2J3vrdsLnTxXo8FaQfJvYm478Fm22HM3Uan8nFgaP600BGTKarzj8kVJQXklrxlZtNz-JYVTcypy0">
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes </span><br><span class="line"><span class="keyword">or</span> No?|approved:&gt;http:<span class="comment">//www.baidu.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line">cond(yes, right)-&gt;c2</span><br><span class="line">cond(no)-&gt;sub1(left)-&gt;op1</span><br><span class="line">c2(yes)-&gt;io-&gt;e</span><br><span class="line">c2(no)-&gt;op2-&gt;e</span><br></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
