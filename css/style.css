@@ -423,18 +423,17 @@ h4 {
 }
 
 .page h3.title {
-  color:#d35400;
   position:relative;
   padding: 2px 5px 5px 5px;
-  border-top:3px solid #ccc;
-  font-size: 1.9em;
+  /*border-top:3px solid #ccc;*/
+  font-size: 2.4em;
   font-weight: normal;
   font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
-  background-color: #e5e5e5;
+  /*background-color: #e5e5e5;*/
 }
 
 .page h3.title a {
-  color:#008CBA;
+  color:#d35400;
 }
 
 .page h3.title div.article-title {
@@ -446,7 +445,7 @@ h4 {
   /* right:5px; */
   float: right;
   font-size:0.7em;
-  color: #777;
+  color: #ccc;
 }
 
 
