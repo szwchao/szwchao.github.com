@@ -423,6 +423,7 @@ h4 {
 }
 
 .page h3.title {
+  color:#d35400;
   position:relative;
   padding: 2px 5px 5px 5px;
   border-top:3px solid #ccc;
@@ -433,7 +434,7 @@ h4 {
 }
 
 .page h3.title a {
-  color: black;
+  color:#008CBA;
 }
 
 .page h3.title div.article-title {

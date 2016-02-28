@@ -318,7 +318,7 @@
     <entry>
       <title><![CDATA[python]]></title>
       <url>http://szwchao.github.com/code/python.html</url>
-      <content type="html"><![CDATA[<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="u5E38_u7528_u6570_u636E_u7C7B_u578B"><a href="#u5E38_u7528_u6570_u636E_u7C7B_u578B" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
+      <content type="html"><![CDATA[<h2 id="u5E38_u7528_u6570_u636E_u7C7B_u578B"><a href="#u5E38_u7528_u6570_u636E_u7C7B_u578B" class="headerlink" title="常用数据类型"></a>常用数据类型</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p>
 <p>列表常用方法：</p>
 <ul>
 <li>用len()函数可以获得list元素的个数</li>
