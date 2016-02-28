@@ -7,7 +7,7 @@ toc: true
 
 # Head 1
 
-> 摘要文字情侣款饥饿网络蓝军冷空气无金额利润空间全忘了
+> 摘要文字
 
 [Baidu](http://www.baidu.com)
 
@@ -154,3 +154,21 @@ if __name__ == '__main__':
     class app extends SwTimerBaseClass, SubTask {
     }
 {% endplantuml %}
+
+```
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes 
+or No?|approved:>http://www.baidu.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|request
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+```

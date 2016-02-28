@@ -1,5 +1,5 @@
 title: git
-date: 2015-12-21 12:57:51
+date: 2016-02-21 12:57:51
 tags: git
 categories: tools
 toc: true 
@@ -100,19 +100,6 @@ git show v1.2
 git tag -a v1.2 9fceb02
 ```
 
-## 高级用法
-
-#### 本地忽略
-
-文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：
-
-```
-git update-index --assume-unchanged /path/to/file       #忽略跟踪
-git update-index --no-assume-unchanged /path/to/file    #恢复跟踪
-```
-
-之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。
-
 ## 配置
 
 配置编辑器
@@ -127,11 +114,17 @@ git config --global core.editor gvim
 
 ```
 git config --global diff.tool gvimdiff
+
+git config --global diff.tool bc3
+git config --global difftool.bc3.path "c:/Program Files (x86)/Beyond Compare 3/bcomp.exe"
 ```
 
 配置merge工具
 ```
 git config --global merge.tool gvimdiff
+
+git config --global merge.tool bc3
+git config --global mergetool.bc3.path "c:/Program Files (x86)/Beyond Compare 3/bcomp.exe"
 ```
 
 git别名
@@ -142,3 +135,28 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 ```
+
+## 高级用法
+
+#### 本地忽略
+
+文件已经被跟踪了，如果在本地想要忽略它的改动，代码库里保持原来版本并且忽略本地改动：
+
+```
+git update-index --assume-unchanged /path/to/file       #忽略跟踪
+git update-index --no-assume-unchanged /path/to/file    #恢复跟踪
+```
+
+之后你在本地修改/path/to/file这个文件，Git也不管它了。就实现了本地忽略。
+
+#### 打包修改过的内容
+
+当前修改过的文件，没有commit，打包成一个压缩包：
+
+```
+git diff --name-only  | xargs zip update.zip
+```
+
+## 其它
+
+用[这个插件](https://github.com/holygeek/git-number)使git status支持列出的文件前加上数字，然后`git number add x`即可。

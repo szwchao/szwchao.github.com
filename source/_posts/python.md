@@ -4,7 +4,6 @@ tags: python
 categories: code
 toc: true 
 ---
-# Python
 ## 常用数据类型
 
 ### list

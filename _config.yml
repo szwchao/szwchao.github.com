@@ -80,3 +80,6 @@ deploy:
   type: git
   repository: https://github.com/szwchao/szwchao.github.com.git
   branch: master
+  #type: git
+  #repository: https://gitcafe.com/szwchao/szwchao.git
+  #branch: gitcafe-pages

@@ -41,6 +41,18 @@ Vim中有一些特殊变量，包括：
  :argdo %s/\<my_foo\>/My_Foo/ge | update
 ```
 
+## 在Visual模式里替换
+
+```
+music amuse fuse refuse
+```
+
+替换us为az，先用Visual选择模式或列模式里选中要替换的文本，然后ESC回到normal模式，再执行
+
+```
+:s/\%Vus/az/g
+```
+
 ## 配色
 
 * 列出所有rgb.txt里的配色
