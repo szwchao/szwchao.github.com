@@ -431,42 +431,117 @@
   <div class="row">
 	
 	
-		<h1 id="Head_1"><a href="#Head_1" class="headerlink" title="Head 1"></a>Head 1</h1><blockquote>
-<p>摘要文字</p>
-</blockquote>
-<p><a href="http://www.baidu.com" target="_blank" rel="external">Baidu</a></p>
-<p><img src="/images/autosar.png" alt=""></p>
-<h2 id="Head_2"><a href="#Head_2" class="headerlink" title="Head 2"></a>Head 2</h2><p>list 1:</p>
+		<h2 id="DC_u7C7B_u56FE"><a href="#DC_u7C7B_u56FE" class="headerlink" title="DC类图"></a>DC类图</h2><img src="http://www.plantuml.com/plantuml/svg/lLPDJnD16BxtLqp2WV9HemSzW9AKPOjh220j64_DTET55dPtoiniaP0Q4uq92SQB5z6BXiIJ68c98HX-ZQLuyYyutPbfTzikuKGFxSppVipplE--inr55-_FMqTVxzowsthvDZUAk8jzG78hrwtZmp-d--qVPwsFv-t3rvUl3Yu-VF_t--3o_FJYyvlMhvFssRlsyRVMqKzf_Vlbq-N-IOvlUM4TCnmWryUSexqSafzHD8lThMUCHY6ng4yP6h7lbKgM5LkBZD4T1TTywHU3ivGHO4cqcHEUaEIcq9obiWFFgLCgc6zPWldwE2x8r9JlSN6_7DKwjl4P5EZbWeIdOwy6zGXoGaze2yzta35jz9Y8iA-SLg8mxOCUeDk994L2j3rl3XoQ1hPbffxBNdDQYaehi1iG2WJF1OIaNrV1Q7WSGGGQWG3tenEfP8fnZB_8CWm8L6WVtm6ooy0yIZmtW--GjCsSJg5nvJWIr4ra79Teob2I2R0Ceik6Ug40bZVxyTXZHAhe81KlW7uIIpKEh05CqvNPkSkycl1eQE7G1Ty7qf6_2QuOHtMzKWUlrWaMa6MLjFJUi9BVo2EJA2F0ec4eDnMgKPxMQ9WwH2TIblcKPKmz4Wv9b7cdevlDOWvM39XEtRHqXqnUMxd2vJFHeRvKs-oCh88Mew06Z2-jspu4yX7cFQME3jU2vhiiP65wfUp1bTqwf0qhi6x92oev5wOia3VrakpDii_5plPP3VdLYP9Z4OimRKghAWGcn9GaZTXgcEG34Fzs9AgLaQPsSy05exj0-lebArLUdNraMvMgCrUjF5ssqM3ThbVESjfWqiOvXKJ6z9oxtQ8Fjk5cMw1FByasRAGqbd43AZJ6yqxyyuHv8evMYqbKMYYM7rRBnJLRAUGoH0KlK4nAZ0R9y1N090vNY-7XfCZLzRL8XRU-QtWcheL-YptaYesdK9WXT_WQzZrzJqmKXS3kHjOKpq5ixPL10qw6lxqjNtCyqtoDBbwhGmcdOaWqfwlwgLaaXD0wC2paluh2J3vrdsLnTxXo8FaQfJvYm478Fm22HM3Uan8nFgaP600BGTKarzj8kVJQXklrxlZtNz-JYVTcypy0">
+<h2 id="Main"><a href="#Main" class="headerlink" title="Main"></a>Main</h2><p>DC的main里建了5个Task：</p>
 <ul>
-<li>item 1</li>
-<li>item 2</li>
-<li>item 3</li>
-<li>item 4</li>
+<li>ControllerPeriodicTask</li>
+<li>ControllerEventsTask</li>
+<li>GeniAppTask</li>
+<li>LowPrioPeriodicTask</li>
+<li>DisplayEventTask</li>
 </ul>
-<h2 id="Head_2-1"><a href="#Head_2-1" class="headerlink" title="Head 2"></a>Head 2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="decorator">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<h3 id="Head_3"><a href="#Head_3" class="headerlink" title="Head 3"></a>Head 3</h3><h4 id="Head_4"><a href="#Head_4" class="headerlink" title="Head 4"></a>Head 4</h4><h5 id="Head_5"><a href="#Head_5" class="headerlink" title="Head 5"></a>Head 5</h5><h6 id="Head_6"><a href="#Head_6" class="headerlink" title="Head 6"></a>Head 6</h6><table>
+<p>之后会调用RunFactory().</p>
+<img src="http://www.plantuml.com/plantuml/svg/ZP91QnD15CVl-oc67YI5LAhWPGKXxiPqgPgbkz9Zc5rVqz7DJ9oP9WGfz52XrAOj25wgWWVnPF0eJVjjTgoU_0hEJBAojMbq3mjltc_d_VSt8rAS0RfryuxZhjTYRwNbDnkju74GLnRlEcv0YNmY4f-J7l18ulIvNMv6BTDP1Kud64iyrl5vptKR80Cg9AOfL1QNxXaie1AuxiTOsCyfau0uQMzAv2AzbRTMhyNrk1QjLcvqOkz-cQ-YXQ94fbweeiljsylBLTInqSeDaohgnwG3t9H_vTBDHw4NX1wZ6wJjkYa7BA6PF8DKYYiHrUZ3nU7N_DjEVdeIX6fuz6Cq-dLsq8T40DTU_lXOMRTRrobECWXP7xZF-ZJWB-ooJqGtmmC3sdeoNBybPzbCSLUIV7yppC_VRMHOREe0aqG_NmqlpaVv-9CwsizOs-bYBeaaZ29rjgC-lrPx9sfyQYIWbmxIZtjP-JH01Zm4JjXJaaxzpMNhFQ1IN4ysW99Qjsi0UpQpgOUi7-gP_nuyTMUdJgbjnrtReWzmAXaVMA5cPZGGXRcIYEFTV3nM-n_LtdjZvE2j-d8yMIcSQFkboCK1H5k9AUsLAB1P3lwFB__cl2zcM9c7bzrScsRRNb9z5Dou-Gq0">
+<h2 id="Subject"><a href="#Subject" class="headerlink" title="Subject"></a>Subject</h2><p>属性：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Observer*&gt; mObserverList;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;Observer*&gt; mObserverListE;</span><br><span class="line">SUBJECT_ID_TYPE mId;</span><br><span class="line">SUBJECT_TYPE mType;</span><br><span class="line"><span class="keyword">int</span> mRefCount;</span><br><span class="line"><span class="keyword">bool</span> mDestroyed;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>mId在数据库中表Subject里定义了id，name，type，是否是GeniAppIf，save（？），FlashBlock（？），Verified</p>
+<p>mType在数据库中表SubjectTypes里定义了Type</p>
+</blockquote>
+<p>方法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">SetSubjectId</span><span class="params">(SUBJECT_ID_TYPE id)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> SUBJECT_ID_TYPE <span class="title">GetSubjectId</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">virtual</span> SUBJECT_TYPE <span class="title">GetSubjectType</span><span class="params">(<span class="keyword">void</span>)</span></span>;	</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">SetSubjectType</span><span class="params">(SUBJECT_TYPE type)</span></span>;	</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IncRefCount</span><span class="params">()</span></span>;	<span class="comment">// may ONLY be called by the SubjectPtr::Attach function</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetRefCount</span><span class="params">()</span></span>;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Subscribe</span><span class="params">(Observer* pObserver)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">SubscribeE</span><span class="params">(Observer* pObserver)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Unsubscribe</span><span class="params">(Observer* pObserver)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">NotifyObservers</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">NotifyObserversE</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>Factory.cpp里有<code>SUBJECTS[]</code>，由数据库Factory.mdb表Subject生成，每个item包含id，type。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> DbSubject SUBJECTS[] = &#123;</span><br><span class="line">  &#123;<span class="number">1</span>, SUBJECT_TYPE_INTDATAPOINT&#125;, <span class="comment">// display_contrast</span></span><br><span class="line">  &#123;<span class="number">2</span>, SUBJECT_TYPE_INTDATAPOINT&#125;, <span class="comment">// display_backlight</span></span><br><span class="line">   ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再根据不同的type，在数据库Factory.mdb的相应子表中定义，如FloatDataPoint类型的，则有表FloatDataPoint，如果这张表里有相应的datapoint定义，则在代码里将这个datapoint初始化成相应的最小最大值和初始值，没有就按default来初始化（？）。</p>
+<p>RunFactory()遍历<code>SUBJECTS[]</code>，初始化，并调用<code>StoreSubject()</code>，用<strong>Subject</strong>的类函数<code>SetSubjectId</code>和<code>SetSubjectType</code>，存入<code>subject_map</code>这样一个<code>std::map</code>里。</p>
+<h2 id="Observer"><a href="#Observer" class="headerlink" title="Observer"></a>Observer</h2><h3 id="u5EFA_u7ACBObserver"><a href="#u5EFA_u7ACBObserver" class="headerlink" title="建立Observer"></a>建立Observer</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> DbObserver</span><br><span class="line">&#123;</span><br><span class="line">  U16 Id;</span><br><span class="line">  OBSERVER_TYPE TypeId;</span><br><span class="line">  <span class="keyword">int</span> SubjectId;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> DbObserver OBSERVERS[] = &#123;</span><br><span class="line">  &#123;<span class="number">1</span>, ObTypeDisplayController, -<span class="number">1</span>&#125;, <span class="comment">// display_controller</span></span><br><span class="line">  ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>RunFactory()遍历<code>OBSERVERS[]</code>，由其TypeId调相应的<code>ConstructObserver(observerId)</code></p>
+<p>Observer表里:</p>
+<table>
 <thead>
 <tr>
-<th>table</th>
-<th>l</th>
-<th>l</th>
+<th>Id</th>
+<th>Name</th>
+<th>TypeId</th>
+<th>ConstructorArgs</th>
+<th>TaskId</th>
+<th>SubjectId</th>
+<th>TaskOrder</th>
+<th>Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>c</td>
-<td>rr</td>
-<td>er</td>
-</tr>
-<tr>
-<td>w</td>
-<td>er</td>
-<td>qq</td>
+<td>5</td>
+<td>status_led_ctrl</td>
+<td>StatusLedCtrl</td>
+<td>ControllerEventsTask</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="Test_plantuml"><a href="#Test_plantuml" class="headerlink" title="Test plantuml"></a>Test plantuml</h3><img src="http://www.plantuml.com/plantuml/svg/lLPDJnD16BxtLqp2WV9HemSzW9AKPOjh220j64_DTET55dPtoiniaP0Q4uq92SQB5z6BXiIJ68c98HX-ZQLuyYyutPbfTzikuKGFxSppVipplE--inr55-_FMqTVxzowsthvDZUAk8jzG78hrwtZmp-d--qVPwsFv-t3rvUl3Yu-VF_t--3o_FJYyvlMhvFssRlsyRVMqKzf_Vlbq-N-IOvlUM4TCnmWryUSexqSafzHD8lThMUCHY6ng4yP6h7lbKgM5LkBZD4T1TTywHU3ivGHO4cqcHEUaEIcq9obiWFFgLCgc6zPWldwE2x8r9JlSN6_7DKwjl4P5EZbWeIdOwy6zGXoGaze2yzta35jz9Y8iA-SLg8mxOCUeDk994L2j3rl3XoQ1hPbffxBNdDQYaehi1iG2WJF1OIaNrV1Q7WSGGGQWG3tenEfP8fnZB_8CWm8L6WVtm6ooy0yIZmtW--GjCsSJg5nvJWIr4ra79Teob2I2R0Ceik6Ug40bZVxyTXZHAhe81KlW7uIIpKEh05CqvNPkSkycl1eQE7G1Ty7qf6_2QuOHtMzKWUlrWaMa6MLjFJUi9BVo2EJA2F0ec4eDnMgKPxMQ9WwH2TIblcKPKmz4Wv9b7cdevlDOWvM39XEtRHqXqnUMxd2vJFHeRvKs-oCh88Mew06Z2-jspu4yX7cFQME3jU2vhiiP65wfUp1bTqwf0qhi6x92oev5wOia3VrakpDii_5plPP3VdLYP9Z4OimRKghAWGcn9GaZTXgcEG34Fzs9AgLaQPsSy05exj0-lebArLUdNraMvMgCrUjF5ssqM3ThbVESjfWqiOvXKJ6z9oxtQ8Fjk5cMw1FByasRAGqbd43AZJ6yqxyyuHv8evMYqbKMYYM7rRBnJLRAUGoH0KlK4nAZ0R9y1N090vNY-7XfCZLzRL8XRU-QtWcheL-YptaYesdK9WXT_WQzZrzJqmKXS3kHjOKpq5ixPL10qw6lxqjNtCyqtoDBbwhGmcdOaWqfwlwgLaaXD0wC2paluh2J3vrdsLnTxXo8FaQfJvYm478Fm22HM3Uan8nFgaP600BGTKarzj8kVJQXklrxlZtNz-JYVTcypy0">
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start|past:&gt;http:<span class="comment">//www.google.com[blank]</span></span><br><span class="line">e=&gt;end: End:&gt;http:<span class="comment">//www.google.com</span></span><br><span class="line">op1=&gt;operation: My Operation|past</span><br><span class="line">op2=&gt;operation: Stuff|current</span><br><span class="line">sub1=&gt;subroutine: My Subroutine|invalid</span><br><span class="line">cond=&gt;condition: Yes </span><br><span class="line"><span class="keyword">or</span> No?|approved:&gt;http:<span class="comment">//www.baidu.com</span></span><br><span class="line">c2=&gt;condition: Good idea|rejected</span><br><span class="line">io=&gt;inputoutput: <span class="keyword">catch</span> something...|request</span><br><span class="line"></span><br><span class="line">st-&gt;op1(right)-&gt;cond</span><br><span class="line">cond(yes, right)-&gt;c2</span><br><span class="line">cond(no)-&gt;sub1(left)-&gt;op1</span><br><span class="line">c2(yes)-&gt;io-&gt;e</span><br><span class="line">c2(no)-&gt;op2-&gt;e</span><br></pre></td></tr></table></figure>
+<p>ConstructObserver()里：</p>
+<p>sql语句为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">SELECT</span> Observer.<span class="keyword">Id</span>, Observer.<span class="keyword">Name</span>, ObserverType.NameSpace, ObserverType.<span class="keyword">Name</span>, Observer.ConstructorArgs <span class="keyword">FROM</span> Observer, ObserverType <span class="keyword">WHERE</span> (Observer.TypeId=ObserverType.<span class="keyword">Id</span>) <span class="keyword">AND</span> (ObserverType.IsSingleton=<span class="number">0</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> Observer.<span class="keyword">Id</span></span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> Observer* <span class="title">ConstructObserver</span><span class="params">(<span class="keyword">const</span> U16 observerId)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (observerId)</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>:  <span class="comment">//status_led_ctrl</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> StatusLedCtrl();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果要加一个模块，需先在<code>ObserverType</code>表里新加一行，name为模块的类名（构造函数）。</p>
+<p>然后在<code>Observer</code>表里新加一行，<code>TypeId</code>选<code>ObserverType</code>里新加行的<strong>name</strong>，设定<strong>TaskId</strong></p>
+<p>RunFactory()里根据不同的TypeId构建不同的Observer</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Observer* p_observer;</span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; OBSERVERS_CNT; j++)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">switch</span>(OBSERVERS[j].TypeId)</span><br><span class="line">    <span class="keyword">case</span> ObTypeStatusLedCtrl:</span><br><span class="line">      p_observer = ConstructObserver(OBSERVERS[j].Id);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    ......</span><br><span class="line">  <span class="keyword">if</span> (p_observer) &#123;</span><br><span class="line">    StoreObserver(OBSERVERS[j], p_observer);   <span class="comment">//存到observer_map里</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    FatalErrorOccured(<span class="string">"Factory generator: Unknown observer!"</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>); <span class="comment">// Unknown observer!</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u5EFA_u7ACBObserver_u4E0ETask_u7684_u5173_u8054"><a href="#u5EFA_u7ACBObserver_u4E0ETask_u7684_u5173_u8054" class="headerlink" title="建立Observer与Task的关联"></a>建立Observer与Task的关联</h3><p>OBSERVER_TASK的结构：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> DbObserverTask</span><br><span class="line">&#123;</span><br><span class="line">  U16 ObserverId;</span><br><span class="line">  U16 TaskId;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>由该条SQL语句生成：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">SELECT</span> Observer.<span class="keyword">Id</span>, Task.<span class="keyword">Id</span> <span class="keyword">FROM</span> Observer, Task <span class="keyword">WHERE</span> (((Observer.TaskId)=[Task].[<span class="keyword">Id</span>])) <span class="keyword">ORDER</span> <span class="keyword">BY</span> Task.<span class="keyword">Id</span>, Observer.TaskOrder, Observer.<span class="keyword">Id</span></span></span><br></pre></td></tr></table></figure>
+<p>建立联系：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; OBSERVER_TASK_CNT; j++)</span><br><span class="line">&#123;</span><br><span class="line">  p_sub_task = <span class="keyword">dynamic_cast</span>&lt;SubTask*&gt;(GetObserver(OBSERVER_TASK[j].ObserverId)); <span class="comment">//相应的Observer强制转为SubTask</span></span><br><span class="line">  p_task = GetTask(OBSERVER_TASK[j].TaskId);  <span class="comment">//返回5个主Task之一</span></span><br><span class="line">  <span class="keyword">if</span> (p_sub_task &amp;&amp; p_task) &#123;</span><br><span class="line">    p_task-&gt;AddSubTask(p_sub_task);           <span class="comment">//主Task添加其为子Task</span></span><br><span class="line">    p_sub_task-&gt;SetTaskCtrlPointer(p_task);   <span class="comment">//子Task也添加父Task</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    FatalErrorOccured(<span class="string">"observer task"</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u5EFA_u7ACBObserver_u4E0ESubject_u7684_u8054_u7CFB_uFF08Observer_u6302_u63A5Subject_uFF09"><a href="#u5EFA_u7ACBObserver_u4E0ESubject_u7684_u8054_u7CFB_uFF08Observer_u6302_u63A5Subject_uFF09" class="headerlink" title="建立Observer与Subject的联系（Observer挂接Subject）"></a>建立Observer与Subject的联系（Observer挂接Subject）</h3><p>首先要在数据库中建立联系，表ObserverSubjects里，形如：</p>
+<table>
+<thead>
+<tr>
+<th>SubjectId</th>
+<th>ObserverId</th>
+<th>SubjectRelationId</th>
+<th>id</th>
+<th>Access</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation_mode_actual_pump_6</td>
+<td>advanced_flow_ctrl</td>
+<td>OPERATION_MODE_PUMP_6</td>
+<td>6923</td>
+<td>Read</td>
+<td></td>
+</tr>
+<tr>
+<td>operation_mode_actual_pump_5</td>
+<td>advanced_flow_ctrl</td>
+<td>OPERATION_MODE_PUMP_5</td>
+<td>6922</td>
+<td>Read</td>
+</tr>
+</tbody>
+</table>
+<p>OBSERVER_SUBJECTS的结构：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> DbObserverSubject</span><br><span class="line">&#123;</span><br><span class="line">  U16 SubjectId;</span><br><span class="line">  U16 ObserverId;</span><br><span class="line">  <span class="keyword">int</span> SubjectRelation;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>由该条SQL语句生成：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">SELECT</span> ObserverSubjects.SubjectId <span class="keyword">AS</span> SubjectId, Observer.<span class="keyword">Id</span> <span class="keyword">AS</span> ObserverId, <span class="string">'SP_'</span>+ObserverType.ShortName+<span class="string">'_'</span>+SubjectRelation.<span class="keyword">Name</span> <span class="keyword">AS</span> SubjectPointerName <span class="keyword">FROM</span> ObserverType <span class="keyword">INNER</span> <span class="keyword">JOIN</span> ((Observer <span class="keyword">INNER</span> <span class="keyword">JOIN</span> SubjectRelation <span class="keyword">ON</span> Observer.TypeId = SubjectRelation.ObserverTypeId) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> ObserverSubjects <span class="keyword">ON</span> (SubjectRelation.<span class="keyword">Id</span> = ObserverSubjects.SubjectRelationId) <span class="keyword">AND</span> (Observer.<span class="keyword">Id</span> = ObserverSubjects.ObserverId)) <span class="keyword">ON</span> ObserverType.<span class="keyword">Id</span> = Observer.TypeId <span class="keyword">ORDER</span> <span class="keyword">BY</span> ObserverId, ObserverSubjects.SubjectId</span></span><br></pre></td></tr></table></figure>
+<p>建立联系:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Subject* p_subject;</span><br><span class="line"><span class="keyword">int</span> refCount;</span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; OBSERVER_SUBJECTS_CNT; j++)</span><br><span class="line">&#123;</span><br><span class="line">  p_observer = GetObserver(OBSERVER_SUBJECTS[j].ObserverId);</span><br><span class="line">  p_subject = GetSubject(OBSERVER_SUBJECTS[j].SubjectId);</span><br><span class="line">  <span class="keyword">if</span> (p_observer &amp;&amp; p_subject)</span><br><span class="line">  &#123;</span><br><span class="line">    refCount = p_subject-&gt;GetRefCount();</span><br><span class="line">    <span class="comment">//这里是各个Observer的SubjectPtr成员变量与相应的Subject挂接</span></span><br><span class="line">    p_observer-&gt;SetSubjectPointer(OBSERVER_SUBJECTS[j].SubjectRelation,p_subject);</span><br><span class="line">    <span class="comment">//这里refCount应当自加过了，否则就是出错了</span></span><br><span class="line">    <span class="keyword">if</span> (refCount == p_subject-&gt;GetRefCount())</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">// observer did not set the subject pointer</span></span><br><span class="line">      <span class="keyword">if</span> (p_observer) p_observer = p_observer; <span class="comment">// ease debug</span></span><br><span class="line">      <span class="keyword">if</span> (p_subject) p_subject = p_subject;  <span class="comment">// ease debug</span></span><br><span class="line">     FatalErrorOccured(<span class="string">"SetSubjectPointer"</span>);</span><br><span class="line">     <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   FatalErrorOccured(<span class="string">"Subject Observer"</span>);</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>SetSubjectPointer</code>是Observer的纯虚函数，在各个app里实现。实现形式为：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> DDACtrl::SetSubjectPointer(<span class="keyword">int</span> id, Subject* pSubject)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">switch</span> (id)</span><br><span class="line">  &#123;	</span><br><span class="line">	<span class="keyword">case</span> SP_DDAC_FIXED_DOSING_ENABLED:</span><br><span class="line">	  mpDDAed.Attach(pSubject);</span><br><span class="line">	  <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> SP_DDAC_DOSING_QUANTITY_ACT:</span><br><span class="line">	  mpDosingQuantity.Attach(pSubject);</span><br><span class="line">	  <span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">break</span>; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mpDDAed为SubjectPtr类，SubjectPtr相当于Subject的指针类，Attach的作用就是把pSubject强制转换为该类的成员变量m_pSubject（模板类），同时自加pSubject的refCount;</p>
+<h3 id="u5EFA_u7ACBObserver_u4E0ESubject_u7684_u8054_u7CFB_uFF08Subject_u6302_u63A5Observer_uFF09"><a href="#u5EFA_u7ACBObserver_u4E0ESubject_u7684_u8054_u7CFB_uFF08Subject_u6302_u63A5Observer_uFF09" class="headerlink" title="建立Observer与Subject的联系（Subject挂接Observer）"></a>建立Observer与Subject的联系（Subject挂接Observer）</h3><p>对每一个Observer，调用<code>ConnectToSubjects()</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (OBSERVER_MAP_ITR itr = observer_map.begin(); itr != observer_map.end(); itr++)</span><br><span class="line">&#123;</span><br><span class="line">  itr-&gt;second-&gt;ConnectToSubjects();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ConnectToSubjects()由各个app实现:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> DDACtrl::ConnectToSubjects()</span><br><span class="line">&#123;</span><br><span class="line">  mpDDAed-&gt;Subscribe(<span class="keyword">this</span>);</span><br><span class="line">  mpDosingQuantity-&gt;Subscribe(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mpDDAed为SubjectPtr类，其<code>Subscribe</code>函数其实调用的Subject类的Subscribe函数:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Subject::Subscribe(Observer* pObserver)</span><br><span class="line">&#123;</span><br><span class="line">  OS_EnterRegion();</span><br><span class="line">  mObserverList.push_back(pObserver);</span><br><span class="line">  OS_LeaveRegion();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对每个Subject都有成员mObserverList，这个函数将对应的Observer放入这个列表里。</p>
+<p>至此就建立了每个Observer与Subject的双向联系。</p>
 
 	
 	</div>
@@ -527,21 +602,21 @@
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
-		
-			<li><a href="/tags/python/">python<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>2</span></a></li>
 		
 			<li><a href="/tags/dc/">dc<span>1</span></a></li>
-		
-			<li><a href="/tags/markdown/">markdown<span>1</span></a></li>
 		
 			<li><a href="/tags/tools/">tools<span>3</span></a></li>
 		
 			<li><a href="/tags/work/">work<span>1</span></a></li>
 		
-			<li><a href="/tags/vim/">vim<span>2</span></a></li>
+			<li><a href="/tags/markdown/">markdown<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c<span>1</span></a></li>
+		
+			<li><a href="/tags/python/">python<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
 		
 		 
 		</ul>
