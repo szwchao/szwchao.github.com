@@ -83,4 +83,4 @@ deploy:
   type: git
   repository: 
       github: https://github.com/szwchao/szwchao.github.com.git,master
-      gitcafe: git@gitcafe.com:szwchao/szwchao.git,gitcafe-pages
+      #gitcafe: git@gitcafe.com:szwchao/szwchao.git,gitcafe-pages
