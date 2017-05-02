@@ -100,6 +100,12 @@ git show v1.2
 git tag -a v1.2 9fceb02
 ```
 
+删除标签
+
+```bash
+git tag -d v1.2
+```
+
 ## 配置
 
 下面简单的方法可以让git diff的时候忽略换行符的差异：
@@ -142,6 +148,32 @@ git config --global alias.st status
 ```
 
 ## 高级用法
+
+#### Stash
+
+利用stash暂时保存已做的修改
+
+```
+git stash
+```
+
+```
+git stash save "说明"
+```
+
+取出暂存的修改
+
+```
+git stash pop
+```
+
+或
+
+```
+git stash pop stash@{n}
+```
+
+n为`git stash list`里的index
 
 #### 推送本地分支并在远程新建分支
 
