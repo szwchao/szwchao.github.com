@@ -49,6 +49,12 @@ git commit -a -m 'xxx'
 git pull
 ```
 
+### 从远程仓库中拉取指定分支
+
+```bash
+git fetch origin remotebranch[:localbranch]
+```
+
 ### 撤销
 
 如果还没有添加到暂存区，撤消对文件的修改
@@ -107,6 +113,11 @@ git tag -d v1.2
 ```
 
 ## 配置
+
+编辑config文件
+```bash
+git config -e [--global]
+```
 
 下面简单的方法可以让git diff的时候忽略换行符的差异：
 ```bash
@@ -243,6 +254,36 @@ git submodule update --init --recursive
 - 当子模块有更新后，用如下命令更新
 ```bash
 git submodule foreach git pull origin master
+```
+
+#### 仓库瘦身
+
+从仓库中删除大文件，*注意*会改写历史，commit id全部变了
+
+```
+# 删除单个大文件
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch path/to/file"  --prune-empty --tag-name-filter cat -- --all
+# 或者删除目录
+git filter-branch --force --index-filter "git rm -rf --cached --ignore-unmatch path"  --prune-empty --tag-name-filter cat -- --all
+git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
+git reflog expire --expire=now --all
+git gc --prune=now
+du -hs .git
+```
+
+完了后需要强行push到远端
+
+```
+git push --all --force
+git push --tags --force
+```
+
+#### 删除log中的分支
+
+有时本地和远程分支都删除了，但log里还有
+
+```
+git remote prune origin
 ```
 
 ## 其它
